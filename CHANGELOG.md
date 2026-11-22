@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.4.1
+
+- **Quick fix for a missing context prefix.** In a transform block without `context:`, a bare path such as `set(attributes["env"], "prod")` is now flagged. The fix offers the right prefix for the block's signal first (`log.attributes` in a logs block), with `resource.attributes` and the others as alternatives.
+- **Version changes page.** [VERSION_CHANGES.md](VERSION_CHANGES.md) lists the OTTL behaviour changes between collector versions, with upstream references and statements you can use to reproduce each one. Linked from the README.
+
 ## 0.4.0
 
 ### True for your collector version
